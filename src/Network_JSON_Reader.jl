@@ -1,5 +1,8 @@
 module Network_JSON_Reader
 
-# Write your package code here.
+using Graphs, MetaGraphs
+using Chain, DataFrames, JSON3, JSONTables
+
+include("JSONDeserializer.jl")
 
 end
