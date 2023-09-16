@@ -20,7 +20,6 @@ function readgraph(filepath::String)
     for (i, row) in enumerate( eachrow( gr_n ) )
         @assert add_vertex!(gr)
         set_prop!(gr, i, :name, row["stop_name"])
-        set_prop!(gr, i, :id, row["node_id"])
         set_prop!(gr, i, :xcoord, row["x"])
         set_prop!(gr, i, :ycoord, row["y"])
     end
