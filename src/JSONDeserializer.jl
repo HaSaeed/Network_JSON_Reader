@@ -12,7 +12,7 @@ function readgraph(filepath::String)
     gr_nodes = DataFrame(jsontable(json3df[1,:nodes]))
     gr_links = DataFrame(jsontable(json3df[1,:links]))
     gr_n = select(gr_nodes, [:stop_name, :node_id, :x, :y])
-    gr_l = select(gr_links, [:node_id_1, :node_id_2, :distance, :traffic])
+    gr_l = select(gr_links, [:node_name_1, :node_name_2, :distance])
     gr_d = DataFrame(jsontable(json3df[1,:demands]))
 
     gr = MetaDiGraph()
